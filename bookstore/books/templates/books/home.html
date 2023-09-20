@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>book shop</title>
+</head>
+<style>
+body {
+    background-color: Cornsilk;
+    font-family: Arial, sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+.fon {
+    width: 150px;
+    background-color: #333;
+    color: #fff;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+.menu {
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu li {
+    padding: 10px 20px;
+    border-bottom: 1px solid #555;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+}
+
+.menu a:hover {
+    background-color: #555;
+}
+
+.content {
+    margin-left: 250px;
+    padding: 20px;
+}
+
+
+</style>
+<body>
+
+<div class ='fon'>
+    Category
+<ul class ='menu' >
+    {% for element in category %}
+  <li><a href="{% url 'book'  element.title  %}">{{ element.title }}</a></li>
+   {% endfor %}
+</ul>
+</div>
+<ul class = 'content'>
+    {% for element in products %}
+            <hr>
+            <li>
+                <img src="data:image/jpg;base64,{{ element.base_64}}"  width="15%"
+                                        height="15%"
+                                        align="top"/>
+                <div>
+<!--                    <b>Category:</b> {{ element.category }}-->
+                    <b>Author:</b> {{ element.author }}<br>
+                    <b>Characteristic:</b> {{ element.characteristic }}
+                </div>
+            </li>
+<h3>Comments:</h3>
+        <ul class="comments">
+            {% for comment in comment_list %}
+            {% if comment.product.id == element.id %}
+                <li>{{ comment.text }}</li>
+            {% endif %}
+            {% endfor %}
+        </ul>
+        <h4>Add a Comment:</h4>
+        <form method="post" >
+            {% csrf_token %}
+        <input style="display:none" name="id" value="{{ element.id }}">
+            {{ comment_form.text }}
+            <button type="submit">Submit Comment</button>
+        </form>
+{% endfor %}
+
+
+</body>
+</html>

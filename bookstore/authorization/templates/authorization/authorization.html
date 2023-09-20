@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Nice dark sign in form</title>
+	<style>
+	body {
+	background-color: #333;
+	display:flex;}
+.list {
+						margin-left: auto;
+    					margin-right: auto;
+						background-color: black;
+						border: none;
+						height: 80%;
+						color: lightgray;
+						}
+  </style>
+
+
+  
+<<body>
+<div class="container">
+    <h1>Sign In</h1>
+    <form id="signin" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+<!--        <input type="text" id="user" name="username" placeholder="Username" />-->
+<!--        <input type="password" id="pass" name="password" placeholder="Password" />-->
+        <button type="submit">Enter</button>
+    </form>
+    <p>Forgot your password? <a href="#" style="color: white;">Click here</a></p>
+</div>
+</body>
+</html>
+
+
+

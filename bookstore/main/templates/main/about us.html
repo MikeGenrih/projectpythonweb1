@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Book store</title>
+
+    <style>
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: Cornsilk;
+    background-size: cover;
+    height: 1000px;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 1rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+}
+
+nav ul li a:hover {
+    background-color: black;
+}
+
+main {
+    padding: 2rem;
+}
+
+.book {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>ABOUT</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'main' %}">Home</a></li>
+                <li><a href="{% url 'aut' %}">Authorization</a></li>
+                <li><a href="{% url 'book' 'home' %}">Catigories</a></li>
+                <li><a href="{% url 'contact' %}">Contact </a></li>
+                <li><a href="{% url 'about' %}">About us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+
+    <main style="color: black;">
+The online store "Knyzhkova Kramnichka book-store.com.ua" was created so that you can easily find and purchase
+        all the necessary educational materials. We have everything you could possibly need
+<br><br>
+        Searching for materials on our website is very convenient. You can search for them by catalog categories
+        or use the "product search" ribbon. If you have any questions, you can always consult the manager by calling
+        one of the numbers listed on the website and we will help you.
+
+
+
+We work directly with publishers, so you can be sure of the originality and quality of the products offered in our
+        online store.
+
+
+
+The peculiarity of our store is that you can get a selection of goods by series, species and educational
+        and methodical sets.
+    </main>
+
+</body>
+</html>

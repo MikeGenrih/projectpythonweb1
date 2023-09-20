@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Reg</title>
+  <style>
+    body {
+      background-color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      background-color: black;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+
+    h1 {
+      text-align: center;
+      color: lightgray;
+    }
+
+    form {
+      text-align: center;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: none;
+      background-color: #222;
+      color: lightgray;
+      border-radius: 5px;
+    }
+
+    button[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      background-color: #007bff;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    button[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      background-color: gray;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 5px;
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Registration</h1>
+    <form method="post">
+      {% csrf_token %}
+      <input type="text" name="username" placeholder="username" required>
+      <input type="password" name="password" placeholder="passwors" required>
+      <button type="submit">Check in</button>
+    </form>
+  </div>
+</body>
+</html>
+

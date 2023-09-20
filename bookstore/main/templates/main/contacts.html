@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Book store</title>
+
+    <style>
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: Cornsilk;
+    background-size: cover;
+    height: 1000px;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 1rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+}
+
+nav ul li a:hover {
+    background-color: black;
+}
+
+main {
+    padding: 2rem;
+}
+
+.book {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>CONTACTS</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'main' %}">Home</a></li>
+                <li><a href="{% url 'aut' %}">Authorization</a></li>
+                <li><a href="{% url 'book' 'home' %}">Catigories</a></li>
+                <li><a href="{% url 'contact' %}">Contact </a></li>
+                <li><a href="{% url 'about' %}">About us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+
+    <main style="color: black;">
+
+
+09:00–18:00 <br>
+ +38 050 448 41 57 <br>
+ Email:  store@folio.com.ua
+
+ <br>  <br>
+or Sign Up using
+ <br>
+
+
+
+        <nav>
+            <ul>
+                <li><a href="#"><img src="https://cdn-icons-png.flaticon.com/512/300/300221.png" width="20"></a></li>
+                <li><a href="#"><img src="https://w7.pngwing.com/pngs/363/420/png-transparent-twitter-flat-
+social-media-icons-set-round-style-icon-thumbnail.png" width="20"></a></li>
+                <li><a href="#"><img src="https://w7.pngwing.com/pngs/261/174/png-transparent-social-
+ media-computer-icons-facebook-media-icon-blue-trademark-logo.png" width="20"></a></li>
+            </ul>
+        </nav>
+    </main>
+
+</body>
+</html>
